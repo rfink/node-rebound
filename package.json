@@ -1,17 +1,19 @@
 {
   "name": "rebound",
   "description": "Rebound - A redis implementation of a fixed length queue for node.js",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": "Ryan Fink <ryanjfink@gmail.com>",
+  "scripts": {
+    "test": "NODE_ENV=test ./node_modules/.bin/mocha --check-leaks --timeout 5000 test/**/*.js"
+  },
   "dependencies": {
-    "debug": "0.7.0",
-    "redis": "0.7.2",
-    "async": "0.2.3"
+    "debug": "2.0.0",
+    "redis": "0.12.1",
+    "async": "0.9.0"
   },
   "devDependencies": {
     "mocha": "*",
-    "should": "*",
-    "supertest": "*"
+    "should": "*"
   },
   "engine": "node >= 0.6.0"
 }

@@ -11,7 +11,7 @@ In your package.json:
 ```js
   {
     "dependencies": {
-      "rebound": "git://github.com/rfink/node-rebound.git"
+      "node-rebound": "0.1.0"
     }
   }
 ```
@@ -28,6 +28,27 @@ In your package.json:
     namespace: 'rebound-test-queue',
     size: 5
   });
+```
+
+You can also just give an already bootstrapped-instance of node-redis:
+
+```js
+
+  var redis = require('redis');
+  var Rebound = require("rebound");
+  var client = redis.createClient();
+ 
+  queue = new Rebound({
+    size: 5,
+    redis: client,
+    namespace: 'rebound-test-queue'
+  });
+
+```
+
+Then you can start adding items to the queue
+
+```js
 
   // Add a single item to the queue
   queue.add(1, function(err) {
