@@ -20,7 +20,7 @@ In your package.json:
 
 ```js
 
-  var Rebound = require("rebound");
+  var Rebound = require("node-rebound");
 
   queue = new Rebound({
     port: 6379,
@@ -35,7 +35,7 @@ You can also just give an already bootstrapped-instance of node-redis:
 ```js
 
   var redis = require('redis');
-  var Rebound = require("rebound");
+  var Rebound = require("node-rebound");
   var client = redis.createClient();
  
   queue = new Rebound({

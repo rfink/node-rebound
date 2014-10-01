@@ -1,5 +1,5 @@
 {
-  "name": "rebound",
+  "name": "node-rebound",
   "description": "Rebound - A redis implementation of a fixed length queue for node.js",
   "version": "0.1.0",
   "author": "Ryan Fink <ryanjfink@gmail.com>",
